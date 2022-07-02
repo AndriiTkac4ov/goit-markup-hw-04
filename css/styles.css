@@ -7,9 +7,10 @@
     --accent-color: #2196F3;
     --hero-text-color: #FFFFFF;
     --title-text-color: #212121;
+    --team-social-net-accent-color: #FFFFFF;
     --location-text-color: #FFFFFF;
     --address-text-color: rgba(255, 255, 255, 0.6);
-    --filter-accent-color: #FFFFFF;;
+    --filter-accent-color: #FFFFFF;
 
     /* background colors */
     --primary-bcg-color: #FFFFFF;
@@ -18,6 +19,7 @@
     --hero-button-accent-color: #188CE8;
     --team-bcg-color: #F5F4FA;
     --team-members-bcg-color: #FFFFFF;
+    --team-member-social-nets-color: #AFB1B8;
     --portfolio-filter-bcg-color: #F5F4FA;
     --portfolio-filter-accent-color: #2196F3;
     --header-border-color: #ECECEC;
@@ -281,6 +283,8 @@ img {
 }
 
 .advantage-text {
+    margin-bottom: 0;
+
     line-height: 1.714;
 }
 
@@ -343,11 +347,43 @@ img {
 }
 
 .team-member-function {
-    margin-bottom: 0;
-
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+}
+
+.team-member-social-nets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-net {
+    width: 44px;
+    border-radius: 50%; 
+}
+
+.social-net:not(:first-child) {
+    margin-left: 10px;
+}
+
+.team-member .social-net:hover,
+.team-member .social-net:focus {
+    background-color: var(--accent-color);
+}
+
+.icon-social-net {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+
+    fill: var(--team-member-social-nets-color);
+}
+
+.icon-social-net:hover,
+.icon-social-net:focus {
+    fill: var(--team-social-net-accent-color);
 }
 
 /* footer */
