@@ -21,6 +21,7 @@
     --team-members-bcg-color: #FFFFFF;
     --team-member-social-nets-color: #AFB1B8;
     --clientele-color: #AFB1B8;
+    --footer-social-nets-bcg-color: rgba(255, 255, 255, 0.1);
     --portfolio-filter-bcg-color: #F5F4FA;
     --portfolio-filter-accent-color: #2196F3;
     --header-border-color: #ECECEC;
@@ -461,7 +462,9 @@ img {
 }
 
 .mail-link:hover .icon-envelope,
-.tel-link:hover .icon-smartphone {
+.mail-link:focus .icon-envelope,
+.tel-link:hover .icon-smartphone,
+.tel-link:focus .icon-smartphone {
     fill: var(--accent-color);
 }
 
@@ -507,8 +510,13 @@ img {
     height: 44px;
 
     border-radius: 50%;
-    background: red;
+    background-color: var(--footer-social-nets-bcg-color);
     fill: var(--logo-footer-text-color);
+}
+
+.footer-connect-link:hover,
+.footer-connect-link:focus {
+    background-color: var(--accent-color);
 }
 
 /* Page Portfolio */
@@ -581,8 +589,14 @@ img {
 }
 
 .portfolio-link {
+    display: block;
     list-style: normal;
     text-decoration: none;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-title {
